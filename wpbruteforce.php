@@ -1,5 +1,6 @@
 #!/usr/bin/php
 <?php
+error_reporting(E_ALL);
 require("class-IXR.php");
 
 class XMLRPC_WP {
@@ -11,7 +12,7 @@ class XMLRPC_WP {
 		#Read a username and password files
 		$this->create_lists($users_file, $passwords_file);
 	}
-	function create_lists($users_file, $passwords_fille) {
+	function create_lists($users_file, $passwords_file) {
 		if(!file_exists($users_file)) {
 			echo("[-] User list doesn't exists!\r\n");
 			exit(0);	
@@ -51,7 +52,7 @@ class XMLRPC_WP {
 }
 
 if(!empty($argv[1]) && !empty($argv[2]) && !empty($argv[3])) {
-	if(empty(parse_url($site)['scheme'])) {
+	if(empty(parse_url($argv[1])['scheme'])) {
 		echo("[-] URL Invalid!\r\nExample URL: http(s)://example.com\r\n");
 		exit(0);		
 	}
