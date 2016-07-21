@@ -5,6 +5,6 @@ A malicious attacker might to hack a WordPress users using this vulnerability
 
 **USAGE:**
 
-`./wpbruteforce.php URL usernames.txt passwords.txt`
+`./wpbruteforce.php URL users.txt passwords.txt`
 
-`php wpbruteforce.php URL usernames.txt passwords.txt`
+`php wpbruteforce.php URL users.txt passwords.txt`

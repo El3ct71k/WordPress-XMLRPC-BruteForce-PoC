@@ -28,7 +28,8 @@ class XMLRPC_WP {
 	function login($username, $password) {
 		$client = new IXR_Client($this->site . '/xmlrpc.php');
 		if (!$client->query('wp.getCategories','', $username,$password)) {  
-			return False;
+            echo "\033[31m" . trim($username) . " : " . trim($password) . "  - Not Working\n";
+            return False;
 		}
 		return True;
 	}
